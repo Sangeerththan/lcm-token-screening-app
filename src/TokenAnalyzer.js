@@ -18,12 +18,15 @@ const TokenAnalyzer = () => {
             // Check if the "results" property exists in the response
             if (response.data.results && Array.isArray(response.data.results)) {
                 setResults(response.data.results);
+                
             } else {
                 console.error('Invalid response format:', response.data);
             }
         } catch (error) {
             console.error('Error analyzing token:', error);
         }
+
+        console.log(results)
     };
 
     return (<>
@@ -43,11 +46,26 @@ const TokenAnalyzer = () => {
         <div className="results-container">
             {results.map((result, index) => (
                 <div key={index} className="result-item">
-                    <h2>{result.title}</h2>
+                    <h2>
+                        <a href={result.link} target="_blank" rel="noopener noreferrer">
+                            {result.title}
+                        </a>
+                    </h2>
                     <p><strong>Source:</strong> {result.source}</p>
                     <p><strong>Date:</strong> {result.date}</p>
                     <p><strong>Summary:</strong> {result.summary}</p>
-                    <p><strong>Sentiment:</strong> {result.sentiment}</p>
+                    <p>
+                        <strong>Sentiment:</strong>
+                        <span
+                            style={{
+                                color:
+                                    result.sentiment === 'Positive' ? 'green' : 
+                                    result.sentiment === 'Negative' ? 'red' : 'black',
+                            }}
+                        >
+                            <strong>{result.sentiment}</strong>
+                        </span>
+                    </p>
                 </div>
             ))}
         </div>
