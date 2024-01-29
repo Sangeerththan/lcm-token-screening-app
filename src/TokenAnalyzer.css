@@ -1,0 +1,53 @@
+/* TokenAnalyzer.css */
+
+.token-analyzer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: CENTER;
+}
+
+.keyword-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.analyze-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.analyze-button:hover {
+    background-color: #45a049;
+}
+
+.results-container {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.result-item {
+    border: 1px solid #ff0404;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 0.5rem;
+    border-bottom-width: thick;
+}
+
+/* .result-item h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.result-item p {
+    margin: 5px 0;
+} */
