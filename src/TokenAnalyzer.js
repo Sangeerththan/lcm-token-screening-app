@@ -11,14 +11,14 @@ const TokenAnalyzer = () => {
         try {
             const keywordArray = keywords.split(',').map(keyword => keyword.trim());
 
-            const response = await axios.post('http://localhost:5000/api/analyze_token', { keywords: keywordArray });
+            const response = await axios.post('http://52.172.89.199:5000/api/analyze_token', { keywords: keywordArray });
 
             console.log("Keywords: ", keywords);
 
             // Check if the "results" property exists in the response
             if (response.data.results && Array.isArray(response.data.results)) {
                 setResults(response.data.results);
-                
+
             } else {
                 console.error('Invalid response format:', response.data);
             }
@@ -46,12 +46,10 @@ const TokenAnalyzer = () => {
         <div className="results-container">
             {results.map((result, index) => (
                 <div key={index} className="result-item">
-                    <h2>
-                        <a href={result.link} target="_blank" rel="noopener noreferrer">
-                            {result.title}
-                        </a>
-                    </h2>
-                    <p><strong>Source:</strong> {result.source}</p>
+                    <h2>{result.title}</h2>
+                    <p><strong>Source:</strong> <a href={result.link} target="_blank" rel="noopener noreferrer">
+                        {result.source}
+                    </a></p>
                     <p><strong>Date:</strong> {result.date}</p>
                     <p><strong>Summary:</strong> {result.summary}</p>
                     <p>
@@ -59,8 +57,8 @@ const TokenAnalyzer = () => {
                         <span
                             style={{
                                 color:
-                                    result.sentiment === 'Positive' ? 'green' : 
-                                    result.sentiment === 'Negative' ? 'red' : 'black',
+                                    result.sentiment === 'Positive' ? 'green' :
+                                        result.sentiment === 'Negative' ? 'red' : 'black',
                             }}
                         >
                             <strong>{result.sentiment}</strong>
