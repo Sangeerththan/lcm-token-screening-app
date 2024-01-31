@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lcm-token-screening-app/static/css/main.321f4773.css",
+    "main.js": "/lcm-token-screening-app/static/js/main.d960afa1.js",
+    "static/js/787.9580930e.chunk.js": "/lcm-token-screening-app/static/js/787.9580930e.chunk.js",
+    "index.html": "/lcm-token-screening-app/index.html",
+    "main.321f4773.css.map": "/lcm-token-screening-app/static/css/main.321f4773.css.map",
+    "main.d960afa1.js.map": "/lcm-token-screening-app/static/js/main.d960afa1.js.map",
+    "787.9580930e.chunk.js.map": "/lcm-token-screening-app/static/js/787.9580930e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.321f4773.css",
+    "static/js/main.d960afa1.js"
+  ]
+}
