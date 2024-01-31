@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "serve public",
-    "build": "esbuild ./src/index.js --bundle --outfile=public/tokenApp.js --loader:.js=jsx --format=cjs",
+    "build": "esbuild ./src/index.js --bundle --outfile=tokenApp.js --loader:.js=jsx --format=cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
